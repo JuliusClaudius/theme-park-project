@@ -12,14 +12,17 @@ public class Customer {
 	public int starttime=0;
 	public int endtime=0;
 	Random gen = new Random();
-
+    
+    for (int pass = 0; pass ++; pass<10){
+	boolean[] fastpass = true; 
+    }
 	//constructor
 	public Customer(int maxtime) {
 		status = new RiderStatus[maxtime];
 		Arrays.fill(status, RiderStatus.FREE);
 	}
 
-
+   
     public void tick(int time, List<Ride> rides)
 	{
 		// if the customer hasn't arrived yet, do nothing.
