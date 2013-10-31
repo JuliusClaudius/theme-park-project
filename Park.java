@@ -56,6 +56,7 @@ public class Park {
 			Customer c = new Customer(maxtime);
 			c.starttime = gen.nextInt(maxtime/2);
 			c.endtime = gen.nextInt(maxtime/2) + maxtime/2;
+			c.faster = c.Fastpass();
 			customers.add(c);
 		}
 

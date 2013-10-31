@@ -1,6 +1,9 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.List;
+
+
 
 public class Customer {
 	//PARAMETERS:
@@ -9,13 +12,23 @@ public class Customer {
 
 	//declarations:
 	RiderStatus[] status;
+        public boolean[] faster = new boolean[10];
 	public int starttime=0;
 	public int endtime=0;
 	Random gen = new Random();
-    
-    for (int pass = 0; pass ++; pass<10){
-	boolean[] fastpass = true; 
-    }
+
+        public boolean[] Fastpass(){
+	    boolean[] passer = new boolean[10];
+	    int x = 0;
+	    x = gen.nextInt(2);
+	    if (x==0){
+		Arrays.fill(passer, true);
+	    }
+	    else{
+		Arrays.fill(passer, false);
+	    }
+	    return passer;
+        }
 	//constructor
 	public Customer(int maxtime) {
 		status = new RiderStatus[maxtime];
